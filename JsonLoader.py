@@ -8,8 +8,11 @@ class JsonLoader:
 
 
     def loadJsonData(self, url):
-        urlLoader = urlopen(url)
-        self.__jsonData= json.load(urlLoader)
+        try:
+            urlLoader = urlopen(url)
+            self.__jsonData= json.load(urlLoader)
+        except Exception as e:
+            print(e)
     def getJsonData(self):
         return self.__jsonData
 
