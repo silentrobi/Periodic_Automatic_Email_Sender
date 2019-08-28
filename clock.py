@@ -54,4 +54,4 @@ scheduler.start()
 #https://stackoverflow.com/questions/14874782/apscheduler-in-flask-executes-twice
 #run app
 if __name__ == '__main__':
-    app.run()
+    app.run(debug= True, use_reloader=False)
