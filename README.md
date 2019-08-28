@@ -45,6 +45,13 @@ Check the following links for more information:
 [BlockScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/blocking.html#apscheduler.schedulers.blocking.BlockingScheduler)
 [BackgroundScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/background.html#apscheduler.schedulers.background.BackgroundScheduler)
 
+# requirements.txt
+
+requirements.txt file contains project dependencies/ libraries.
+
+#Procfile
+In order to run cron job in heroku, Procfile is necessary. It contains the command: `clock: python clock.py`. Visit the the 
+[Procfile](https://devcenter.heroku.com/articles/procfile) link for more information.
 # Hosting on Heroku
 
 1. Login to Heroku<br/> `hereku login`
