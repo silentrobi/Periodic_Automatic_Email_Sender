@@ -35,10 +35,14 @@ clock.py script file runs cron job that sends weekly mail.
 In this script file APScheluder library is used to create 'cron' job. 
 There are different scheduler in APScheduler. Most suitables are BlockingScheduler and BackgroundScheduler class.
 
-**Note:** if BlockScheduler is used then no need to use Flask or infinite loop in clock.py file as start() method never returns. However if BackgroundScheduler is used then we need 
+**Note:** if BlockScheduler is used, then there is no need to use Flask or infinite loop in clock.py file as start() method never returns. However if BackgroundScheduler is used then we need 
 `if __name__ == '__main__':
     app.run(debug= True, use_reloader=False)`
 code or infinite loop `while True:
     time.sleep(2)` code at the end of the clock.py file.
+
+Check the following links for more information:
+[BlockScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/blocking.html#apscheduler.schedulers.blocking.BlockingScheduler)
+
     
 
