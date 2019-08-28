@@ -15,5 +15,27 @@ EmailActivity class responsible for sending email.
 *  **getMessageObject(self)** return message obeject
 *  **! appendTextContext(self)**  *Under development*. ! means under development
 
+# FileIO -- *class*
+FileIO class creates CSV file. More methods can be added to this class like 'createPdfFile()
 
+**Methods:**
+
+*  *createCSVFile*(self, jsonData) takes json data as input and create a csv file of that data. This method can be modifed to create a csv file of variable numbers of fields.
+
+# JsonLoader -- *class*
+JsonLoader class load jsondata from url
+
+# clock -- *script file*
+
+clock.py script file runs cron job that sends weekly mail. 
+
+*  **getCurrentDateTime**(timezone) return the current date
+*  **job**()  contains all operations to send email weekly.
+
+In this script file APScheluder library is used to create 'cron' job. 
+There are different scheduler in APScheduler. Most suitables are BlockingScheduler and BackgroundScheduler class.
+**Note:** if BlockScheduler is used then no need to use Flask or infinite loop in clock.py file as start() method never returns. However if BackgroundScheduler is used then we need 
+`if __name__ == '__main__':
+    app.run(debug= True, use_reloader=False)`
+code or infinite loop
 
