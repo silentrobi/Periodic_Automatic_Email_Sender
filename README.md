@@ -47,10 +47,10 @@ Check the following links for more information:
 
 # requirements.txt
 
-requirements.txt file contains project dependencies/ libraries.
+**requirements.txt** file contains project dependencies/ libraries.
 
-#Procfile
-In order to run cron job in heroku, Procfile is necessary. It contains the command: `clock: python clock.py`. Visit the the 
+# Procfile
+In order to run cron job in Heroku, Procfile is necessary. It contains the command: `clock: python clock.py`. Visit the the 
 [Procfile](https://devcenter.heroku.com/articles/procfile) link for more information.
 # Hosting on Heroku
 
@@ -60,7 +60,7 @@ In order to run cron job in heroku, Procfile is necessary. It contains the comma
      `git init`<br/>
      `heroku git:remote -a <project name>`<br/>
 3. Set environment variable<br/>
-     `heroku config:set SENDER_EMAIL=<email> SENDER_PASSWORD=<password>`
+     `heroku config:set SENDER_EMAIL=<email> SENDER_PASSWORD=<password>` -- This is needed to hide the email and password.
     
 4. Deploy the application<br/> 
      `git add .`<br/>
