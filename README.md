@@ -11,8 +11,8 @@ EmailActivity class responsible for sending email.
 *  **addAttachment**(self,filePath, fileName) method add attchment to message. Attachment type is "application" and subtype is "octet-stream". Method parameters are str type.
 *  **sendMail**(self, userEmail, password, mailServer, port) does initial setup that includes secure connection establishment, login to server and send email.
 * **message**(self,From, To ,Subject=None,textContent=None ) initialize message structure. Subject and text content is optional.
-*  **setContext**(self,textContent) can be used to modify the text context
-*  **getMessageObject(self)** return message obeject
+*  **setContext**(self,textContent) can be used to modify the text context.
+*  **getMessageObject(self)** return message obeject.
 *  **! appendTextContext(self)**  *Under development*. ! means under development
 
 # FileIO -- *class*
@@ -23,13 +23,13 @@ FileIO class creates CSV file. More methods can be added to this class like 'cre
 *  *createCSVFile*(self, jsonData) takes json data as input and create a csv file of that data. This method can be modifed to create a csv file of variable numbers of fields.
 
 # JsonLoader -- *class*
-JsonLoader class load jsondata from url
+JsonLoader class load jsondata from url.
 
 # clock -- *script file*
 
 clock.py script file runs cron job that sends weekly mail. 
 
-*  **getCurrentDateTime**(timezone) return the current date
+*  **getCurrentDateTime**(timezone) return the current date.
 *  **job**()  contains all operations to send email weekly.
 
 In this script file APScheluder library is used to create 'cron' job. 
@@ -42,9 +42,9 @@ code or infinite loop `while True:
     time.sleep(2)` code at the end of the clock.py file.
 
 Check the following links for more information:
-[BlockScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/blocking.html#apscheduler.schedulers.blocking.BlockingScheduler)
-[BackgroundScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/background.html#apscheduler.schedulers.background.BackgroundScheduler)
-
+[BlockScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/blocking.html#apscheduler.schedulers.blocking.BlockingScheduler),
+[BackgroundScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/background.html#apscheduler.schedulers.background.BackgroundScheduler)<br/>
+To know about cron job setup visit [here](https://apscheduler.readthedocs.io/en/latest/modules/triggers/cron.html).
 # requirements.txt
 
 **requirements.txt** file contains project dependencies/ libraries.
