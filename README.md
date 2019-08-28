@@ -48,7 +48,7 @@ Check the following links for more information:
 # Hosting on Heroku
 
 1. Login to hereku `hereku login`
-2. Create a new Git repository:
+2. Create a new Git repository:<br/>
      `cd my-project/`
      `git init`
      `heroku git:remote -a <project name>`
