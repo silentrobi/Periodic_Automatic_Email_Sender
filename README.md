@@ -50,7 +50,7 @@ Check the following links for more information:
 **requirements.txt** file contains project dependencies/ libraries.
 
 # Procfile
-In order to run cron job in Heroku, Procfile is necessary. It contains the command: `clock: python clock.py`. Visit the the 
+In order to run cron job in Heroku, **Procfile** is necessary. It does not have extension. It contains the command: `clock: python clock.py`. Visit the the 
 [Procfile](https://devcenter.heroku.com/articles/procfile) link for more information.
 # Hosting on Heroku
 
