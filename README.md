@@ -5,7 +5,7 @@ The project has following classes and script files.
 
 # EmailActivity -- *class*
 
-EmailActivity class responsible for sending email
+EmailActivity class responsible for sending email.
 **Methods:**
 
 *  **addAttachment**(self,filePath, fileName) method add attchment to message. Attachment type is "application" and subtype is "octet-stream". Method parameters are str type.
@@ -13,7 +13,7 @@ EmailActivity class responsible for sending email
 * **message**(self,From, To ,Subject=None,textContent=None ) initialize message structure. Subject and text content is optional.
 *  **setContext**(self,textContent) can be used to modify the text context
 *  **getMessageObject(self)** return message obeject
-*  **! appendTextContext(self)**  *Under development* ! means under development
+*  **! appendTextContext(self)**  *Under development*. ! means under development
 
 
 
