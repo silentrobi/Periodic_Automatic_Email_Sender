@@ -49,16 +49,16 @@ Check the following links for more information:
 
 1. Login to Heroku<br/> `hereku login`
 2. Create a new Git repository:<br/>
-     `cd my-project/`
-     `git init`
-     `heroku git:remote -a <project name>`
-3.set environment variable
+     `cd my-project/`<br/>
+     `git init`<br/>
+     `heroku git:remote -a <project name>`<br/>
+3.set environment variable<br/>
      `heroku config:set SENDER_EMAIL=<email> SENDER_PASSWORD=<password>`
     
-4. Deploy the application 
-     `git add .`
-     `git commit -am "message"`
-     `git push heroku master`
+4. Deploy the application<br/> 
+     `git add .`<br/>
+     `git commit -am "message"`<br/>
+     `git push heroku master`<br/>
      `heroku ps:scale clock=1` --This is a singleton process, meaning you’ll never need to scale up more than 1 of these processes. 
   
 
