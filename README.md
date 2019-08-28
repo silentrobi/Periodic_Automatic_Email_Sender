@@ -70,7 +70,7 @@ In order to run cron job in Heroku, Procfile is necessary. It contains the comma
   
 # Issues or Bugs
 **1. BUG: Flask execute job twich**<br/>
-  **Solution**: Use `use_reloader=False` parameter in `app.run()` flask method
+  **Solution**: Use `use_reloader=False` parameter in `app.run()` flask method.
 **2. BUG: "ValueError: Timezone offset does not match system offset"**<br/>
   **Solution**: add timezone in the APScheduler. For an example `scheduler = BackgroundScheduler(timezone="europe/istanbul")`
 
