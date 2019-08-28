@@ -67,7 +67,7 @@ In order to run cron job in Heroku, **Procfile** is necessary. It does not have 
      `git commit -am "message"`<br/>
      `git push heroku master`<br/>
      `heroku ps:scale clock=1` --App online: This is a singleton process, meaning you’ll never need to scale up more than 1 of these processes.
-5. Stop Application
+5. Stop Application<br/>
      `heroku ps:scale clock=0` --App ofline
   
 # Issues or Bugs
