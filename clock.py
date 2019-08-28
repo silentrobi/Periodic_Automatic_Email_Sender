@@ -34,7 +34,7 @@ def job():
 
     #send email activities
     email = EmailActivity()
-    email.message('abu.musa.rabiul@gmail.com',"mohammad.rabiul@bordatech.com,dawoodmuzammil@hotmail.com",
+    email.message(senderEmail,"mohammad.rabiul@bordatech.com,dawoodmuzammil@hotmail.com",
                   "Food request list",
                   'First successful test of shopping list and email sending micro services. '
                   'I have attached  the list of items to be bought for Izmir office for the next week.ş')
