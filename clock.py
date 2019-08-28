@@ -34,7 +34,7 @@ def job():
 
     #send email activities
     email = EmailActivity()
-    email.message('abu.musa.rabiul@gmail.com',"mohammad.rabiul@bordatech.com",
+    email.message('abu.musa.rabiul@gmail.com',"mohammad.rabiul@bordatech.com,dawoodmuzammil@hotmail.com",
                   "Food request list",
                   'First successful test of shopping list and email sending micro services. '
                   'I have attached  the list of items to be bought for Izmir office for the next week.ş')
@@ -45,8 +45,7 @@ app = Flask(__name__)
 # BUG(26/08/2019): ValueError: Timezone offset does not match system offset: 10800 != 7200. Please, check your config files.
 #solve specific timezone
 scheduler = BackgroundScheduler(timezone="europe/istanbul")
-scheduler.add_job(func=job, trigger='cron', minute= '*', second='0')
-
+scheduler.add_job(func=job, trigger='cron', day_of_week= 'wed', hour='*',minute= '0', second='0')
 # Explicitly kick off the background thread
 scheduler.start()
 
