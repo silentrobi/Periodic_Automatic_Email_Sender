@@ -77,5 +77,6 @@ In order to run cron job in Heroku, **Procfile** is necessary. It does not have 
   **Solution**: Add timezone in the APScheduler. For an example `scheduler = BackgroundScheduler(timezone="europe/istanbul")`.
 
 * **Bug(26/08/2019): UnicodeEncodeError: in FileIO class**<br/>
-  **Solution**:  Specify encoding while opening file. For an example `with open(filePath,'w+', encoding='utf-8') as file:`
+  **Solution**:  Specify encoding while opening file. For an example `with open(filePath,'w+', encoding='utf-8-sig') as file:<br/>
+   *Note* `encoding= 'utf-8'` might not show some characters correctly when opened in some csv reader softwares.
   
