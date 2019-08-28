@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d17958-6a75-44b1-8a62-532f170c6930" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clock.py" beforeDir="false" afterPath="$PROJECT_DIR$/clock.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566981422724</updated>
-      <workItem from="1566981424607" duration="1924000" />
+      <workItem from="1566981424607" duration="2077000" />
     </task>
     <servers />
   </component>
