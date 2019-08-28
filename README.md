@@ -1,4 +1,4 @@
-# Periodic automatic weekly email nofication sender microservice
+# Periodic automatic weekly email notification sender micro service
 
 # Project documantation
 The project has following classes and script files.
@@ -66,7 +66,9 @@ In order to run cron job in Heroku, **Procfile** is necessary. It does not have 
      `git add .`<br/>
      `git commit -am "message"`<br/>
      `git push heroku master`<br/>
-     `heroku ps:scale clock=1` --This is a singleton process, meaning you’ll never need to scale up more than 1 of these processes. 
+     `heroku ps:scale clock=1` --App online: This is a singleton process, meaning you’ll never need to scale up more than 1 of these processes.
+5. Stop Application
+     `heroku ps:scale clock=0` --App ofline
   
 # Issues or Bugs
 * **BUG: Flask execute job twich**<br/>
