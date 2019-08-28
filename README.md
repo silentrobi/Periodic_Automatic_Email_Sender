@@ -75,5 +75,5 @@ In order to run cron job in Heroku, Procfile is necessary. It contains the comma
   **Solution**: Add timezone in the APScheduler. For an example `scheduler = BackgroundScheduler(timezone="europe/istanbul")`.
 
 * **Bug(26/08/2019): UnicodeEncodeError: in FileIO class**<br/>
-  **Solution**:  specify encoding while opening file. For an example `with open(filePath,'w+', encoding='utf-8') as file:`
+  **Solution**:  Specify encoding while opening file. For an example `with open(filePath,'w+', encoding='utf-8') as file:`
   
