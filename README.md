@@ -47,7 +47,7 @@ Check the following links for more information:
 
 # Hosting on Heroku
 
-1. Login to hereku `hereku login`
+1. Login to Heroku<br/> `hereku login`
 2. Create a new Git repository:<br/>
      `cd my-project/`
      `git init`
