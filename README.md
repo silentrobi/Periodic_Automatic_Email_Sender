@@ -37,5 +37,6 @@ There are different scheduler in APScheduler. Most suitables are BlockingSchedul
 **Note:** if BlockScheduler is used then no need to use Flask or infinite loop in clock.py file as start() method never returns. However if BackgroundScheduler is used then we need 
 `if __name__ == '__main__':
     app.run(debug= True, use_reloader=False)`
-code or infinite loop
+code or infinite loop `while True:
+    time.sleep(2)` code at the end of the clock.py file.
 
