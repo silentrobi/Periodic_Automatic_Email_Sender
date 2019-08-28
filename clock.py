@@ -27,19 +27,18 @@ def job():
 
     #reading evnironment file
 
-    senderEmail = os.environ['SENDER_EMAIL']
-    senderPassword = os.environ['SENDER_PASSWORD']
+
     #getting senderName and password
 
 
     #send email activities
     email = EmailActivity()
-    email.message(senderEmail,"mohammad.rabiul@bordatech.com",
+    email.message('abu.musa.rabiul@gmail.com',"mohammad.rabiul@bordatech.com",
                   "Food request list",
                   'First successful test of shopping list and email sending micro services. '
                   'I have attached  the list of items to be bought for Izmir office for the next week.ş')
     email.addAttachment("./files/"+file, file)
-    email.sendMail(senderEmail,senderPassword,'smtp.gmail.com',587)
+    email.sendMail('abu.musa.rabiul@gmail.com','Acifl1234','smtp.gmail.com',587)
 
 app = Flask(__name__)
 # BUG(26/08/2019): ValueError: Timezone offset does not match system offset: 10800 != 7200. Please, check your config files.
