@@ -12,7 +12,7 @@ class FileIO:
         # Bug(26/08/2019): UnicodeEncodeError: 'charmap' codec can't
         # encode character '\u0131' in position 1: character maps to <undefined>
         #fix(26/08/2019): need to specify encode to utf-8 in open () method
-        with open(filePath,'w+', encoding='utf-8') as file:
+        with open(filePath,'w+', encoding='utf-8-sig') as file:
             try:
                 fieldNames = ['Item', 'Office', 'Week']
                 theWriter= csv.DictWriter(file,fieldnames= fieldNames)
