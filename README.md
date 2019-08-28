@@ -72,7 +72,8 @@ In order to run cron job in Heroku, Procfile is necessary. It contains the comma
 * **BUG: Flask execute job twich**<br/>
   **Solution**: Use `use_reloader=False` parameter in `app.run()` flask method. More info on [here](#https://stackoverflow.com/questions/14874782/apscheduler-in-flask-executes-twice).
 * **BUG: "ValueError: Timezone offset does not match system offset"**<br/>
-  **Solution**: add timezone in the APScheduler. For an example `scheduler = BackgroundScheduler(timezone="europe/istanbul")`.
+  **Solution**: Add timezone in the APScheduler. For an example `scheduler = BackgroundScheduler(timezone="europe/istanbul")`.
 
-
+* **Bug(26/08/2019): UnicodeEncodeError: in FileIO class**<br/>
+  **Solution**:  specify encoding while opening file. For an example `with open(filePath,'w+', encoding='utf-8') as file:`
   
