@@ -45,5 +45,20 @@ Check the following links for more information:
 [BlockScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/blocking.html#apscheduler.schedulers.blocking.BlockingScheduler)
 [BackgroundScheduler](https://apscheduler.readthedocs.io/en/latest/modules/schedulers/background.html#apscheduler.schedulers.background.BackgroundScheduler)
 
+# Hosting on Heroku
+
+1. Login to hereku `hereku login`
+2. Create a new Git repository:
+     `cd my-project/`
+     `git init`
+     `heroku git:remote -a <project name>`
+3.set environment variable
+     `heroku config:set SENDER_EMAIL=<email> SENDER_PASSWORD=<password>`
     
+4. Deploy the application 
+     `git add .`
+     `git commit -am "message"`
+     `git push heroku master`
+     `heroku ps:scale clock=1` --This is a singleton process, meaning you’ll never need to scale up more than 1 of these processes. 
+  
 
