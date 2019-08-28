@@ -52,7 +52,7 @@ Check the following links for more information:
      `cd my-project/`<br/>
      `git init`<br/>
      `heroku git:remote -a <project name>`<br/>
-3.set environment variable<br/>
+3. Set environment variable<br/>
      `heroku config:set SENDER_EMAIL=<email> SENDER_PASSWORD=<password>`
     
 4. Deploy the application<br/> 
