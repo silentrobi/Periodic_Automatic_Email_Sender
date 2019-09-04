@@ -5,8 +5,8 @@ import csv
 FileIO class creates CSV file. More methods can be added to this class like 'createPdfFile() 
 '''
 class FileIO:
-    def createCSVFile(self, jsonData): # this method can be modified to make variable number of fields
-        fileName= datetime.now().strftime("%d-%m-%Y-%H-%M-%S")+ ".csv"
+    def createCSVFile(self, jsonData, addtag): # this method can be modified to make variable number of fields
+        fileName= datetime.now().strftime("%d-%m-%Y-%H-%M-%S")+"-"+addtag+ ".csv"
         filePath= "./files/"+fileName
         print(fileName)
         # Bug(26/08/2019): UnicodeEncodeError: 'charmap' codec can't
