@@ -23,8 +23,8 @@ def job():
     apiRouteIzmir = apiRouteForBranch('izmir')
     getCurrentWeek = getCurrentDateTime('europe/istanbul').isocalendar()[1]
     getPreviousWeek = getCurrentWeek - 1
-    apiRouteIstanbul = apiRouteIstanbul + str(getCurrentWeek)
-    apiRouteIzmir = apiRouteIzmir + str(getCurrentWeek)
+    apiRouteIstanbul = apiRouteIstanbul + str(getPreviousWeek)
+    apiRouteIzmir = apiRouteIzmir + str(getPreviousWeek)
     # Get json data from apiroute call
     dataIstanbul = perser.loadJsonData(apiRouteIstanbul)
     dataIzmir = perser.loadJsonData(apiRouteIzmir)
