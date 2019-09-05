@@ -49,7 +49,7 @@ def job():
     msg = "The attached file has last week's food request list."
     # send email activities
     email = EmailActivity()
-    email.message(senderEmail, "silentrobi840@bordatech.com",
+    email.message(senderEmail, "silentrobi840@gmail.com",
                   "Food request list", msg)
     email.addAttachment("./files/" + fileIstanbul, fileIstanbul)
     email.addAttachment("./files/" + fileIzmir, fileIzmir)

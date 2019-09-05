@@ -13,7 +13,7 @@ class FileIO:
         # encode character '\u0131' in position 1: character maps to <undefined>
         #fix(26/08/2019): need to specify encode to utf-8 in open () method
         with open(filePath,'w+', encoding='utf-8-sig') as file:
-
+            try:
                 print("HI")
                 fieldNames = ['Item', 'Office', 'Week']
                 theWriter= csv.DictWriter(file,fieldnames= fieldNames)
@@ -22,7 +22,9 @@ class FileIO:
                 for item in jsonData:
                     # add row to CSV file
                     theWriter.writerow({'Item': item['item'], 'Office':item['office'], 'Week':item['week']})
-                file.close()
+
+            except Exception as e:
+                print(e)
 
         return fileName
 
