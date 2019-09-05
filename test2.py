@@ -19,19 +19,23 @@ def job():
     apiRouteIzmir= apiRouteForBranch('izmir')
     getCurrentWeek = getCurrentDateTime('europe/istanbul').isocalendar()[1]
     getPreviousWeek= getCurrentWeek - 1
-    apiRouteIstanbul= apiRouteIstanbul+ str(getCurrentWeek)
-    apiRouteIzmir= apiRouteIzmir +str(getCurrentWeek)
+    apiRouteIstanbul= apiRouteIstanbul+ str(getPreviousWeek)
+    print(apiRouteIstanbul)
+    apiRouteIzmir= apiRouteIzmir +str(getPreviousWeek)
+    print(apiRouteIzmir)
     #Get json data from apiroute call
-    dataIstanbul= perser.loadJsonData(apiRouteIstanbul)
-    print(perser.getJsonData())
-    dataIzmir =perser.loadJsonData(apiRouteIzmir)
-    print(perser.getJsonData())
+    perser.loadJsonData(apiRouteIstanbul)
+    dataIstanbul = perser.getJsonData()
+
+    perser.loadJsonData(apiRouteIzmir)
+    dataIzmir = perser.getJsonData()
+
 
     
     #Create file that has to be sent as notification
     file= FileIO()
     fileIstanbul=file.createCSVFile(dataIstanbul, 'istanbul')
-    fileIzmir= file.createCSVFile(dataIzmir, 'izmir')
+    #fileIzmir= file.createCSVFile(dataIzmir, 'izmir')
 
     #reading environment variables
 
@@ -47,14 +51,14 @@ def job():
     email.message('abu.musa.rabiul@gmail.com',"mohammad.rabiul@bordatech.com",
                   "Food request list",msg)
     email.addAttachment("./files/"+fileIstanbul, fileIstanbul)
-    email.addAttachment("./files/" + fileIzmir, fileIzmir)
+    #email.addAttachment("./files/" + fileIzmir, fileIzmir)
     email.sendMail('abu.musa.rabiul@gmail.com','Acifl1234','smtp.gmail.com',587)
 
 app = Flask(__name__)
 # BUG(26/08/2019): ValueError: Timezone offset does not match system offset: 10800 != 7200. Please, check your config files.
 #solve specific timezone
 scheduler = BackgroundScheduler(timezone="europe/istanbul")
-scheduler.add_job(func=job, trigger='cron', day_of_week= 'mon', hour='9',minute= '0', second='0')
+scheduler.add_job(func=job, trigger='cron', day_of_week= 'thu', hour='*',minute= '*/1', second='0')
 # Explicitly kick off the background thread
 scheduler.start()
 

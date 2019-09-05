@@ -24,11 +24,14 @@ def job():
     getCurrentWeek = getCurrentDateTime('europe/istanbul').isocalendar()[1]
     getPreviousWeek = getCurrentWeek - 1
     apiRouteIstanbul = apiRouteIstanbul + str(getPreviousWeek)
+
     apiRouteIzmir = apiRouteIzmir + str(getPreviousWeek)
     # Get json data from apiroute call
-    dataIstanbul = perser.loadJsonData(apiRouteIstanbul)
-    dataIzmir = perser.loadJsonData(apiRouteIzmir)
+    perser.loadJsonData(apiRouteIstanbul)
+    dataIstanbul = perser.getJsonData()
 
+    perser.loadJsonData(apiRouteIzmir)
+    dataIzmir = perser.getJsonData()
 
     # Create file that has to be sent as notification
     file = FileIO()
@@ -46,7 +49,7 @@ def job():
     msg = "The attached file has last week's food request list."
     # send email activities
     email = EmailActivity()
-    email.message(senderEmail, "secil.kiroglu@bordatech.com",
+    email.message(senderEmail, "silentrobi840@bordatech.com",
                   "Food request list", msg)
     email.addAttachment("./files/" + fileIstanbul, fileIstanbul)
     email.addAttachment("./files/" + fileIzmir, fileIzmir)
