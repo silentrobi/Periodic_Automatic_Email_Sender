@@ -60,7 +60,7 @@ app = Flask(__name__)
 # BUG(26/08/2019): ValueError: Timezone offset does not match system offset: 10800 != 7200. Please, check your config files.
 # solve specify timezone
 scheduler = BackgroundScheduler(timezone="europe/istanbul")
-scheduler.add_job(func=job, trigger='cron', day_of_week='fri', hour='9', minute='0', second='0')
+scheduler.add_job(func=job, trigger='cron', day_of_week='fri', hour='9', minute='45', second='0')
 # Explicitly kick off the background thread
 scheduler.start()
 
