@@ -46,7 +46,7 @@ def job():
     # print(senderEmail)
     # print(senderPassword)
 
-    msg = "The attached file has last week's food request list."
+    msg = "The attached file has current week's food request list."
     # send email activities
     email = EmailActivity()
     email.message(senderEmail, "eylul.sert@bordatech.com",
