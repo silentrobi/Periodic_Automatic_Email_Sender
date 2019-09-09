@@ -23,9 +23,9 @@ def job():
     apiRouteIzmir = apiRouteForBranch('izmir')
     getCurrentWeek = getCurrentDateTime('europe/istanbul').isocalendar()[1]
     getPreviousWeek = getCurrentWeek - 1
-    apiRouteIstanbul = apiRouteIstanbul + str(getCurrentWeek) # Need to change to getPreviousWeek
+    apiRouteIstanbul = apiRouteIstanbul + str(getPreviousWeek) # Need to change to getPreviousWeek
 
-    apiRouteIzmir = apiRouteIzmir + str(getCurrentWeek)  # Need to change to getPreviousWeek
+    apiRouteIzmir = apiRouteIzmir + str(getPreviousWeek)  # Need to change to getPreviousWeek
     # Get json data from apiroute call
     perser.loadJsonData(apiRouteIstanbul)
     dataIstanbul = perser.getJsonData()
@@ -60,7 +60,7 @@ app = Flask(__name__)
 # BUG(26/08/2019): ValueError: Timezone offset does not match system offset: 10800 != 7200. Please, check your config files.
 # solve specify timezone
 scheduler = BackgroundScheduler(timezone="europe/istanbul")
-scheduler.add_job(func=job, trigger='cron', day_of_week='fri', hour='9', minute='45', second='0')
+scheduler.add_job(func=job, trigger='cron', day_of_week='mon', hour='11', minute='30', second='0')
 # Explicitly kick off the background thread
 scheduler.start()
 
