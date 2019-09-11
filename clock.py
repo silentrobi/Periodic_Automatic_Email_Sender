@@ -39,17 +39,16 @@ def job():
     fileIzmir = file.createCSVFile(dataIzmir, 'izmir')
 
     # reading environment variables
-
+    
+	# environment variables are stored in host server machine.
     senderEmail = os.environ['SENDER_EMAIL']
     senderPassword = os.environ['SENDER_PASSWORD']
     # getting senderName and password
-    # print(senderEmail)
-    # print(senderPassword)
 
     msg = "The attached file has current week's food request list."
     # send email activities
     email = EmailActivity()
-    email.message(senderEmail, "eylul.sert@bordatech.com",
+    email.message(senderEmail, "silentrobi840@gmail.com",
                   "Food request list", msg)
     email.addAttachment("./files/" + fileIstanbul, fileIstanbul)
     email.addAttachment("./files/" + fileIzmir, fileIzmir)
